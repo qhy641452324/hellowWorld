@@ -35,5 +35,62 @@ http://blog.csdn.net/kebi007/article/details/54882425
         合理使用requestAnimationFrame动画代替setTimeout
         CSS中的属性（CSS3 transitions、CSS3 3D transforms、Opacity、Canvas、WebGL、Video）会触发GPU渲染，请合理使用。过渡使用会引发手机过耗电增加
         PC端的在移动端同样适用
+    你如对网站的文件和资源进行优化：
+        文件合并
+        文件最小化、文件压缩
+        使用cdn托管
+        缓存的作用       
+        
+ 列举几种IE6 bug的解决方法：
+        双边距bug ： float引起的，使用display解决；
+        3像素问题：float引起的，使用display:inline -3px;
+        超链接hover点击后失效，使用正确的书写顺序  link  visited hover active 
+        Ie z-index问题：给父级加上position：relative 
+        min-height 最小高度： 使用！important解决
+        select在ie6下遮盖，使用iframe嵌套
+        为什么没有办法定义 1px 左右的宽度的容器（ie6默认的行高造成的，使用over：hidden，zoom：0.08  line-height：1px）
+        
+  
+ 清除浮动的几种方式，各自的优缺点：  http://www.jb51.net/css/173023.html
+    1、使用空标签清除浮动  clear：both （理论上能清除任何的标签：但是增加无意义的标签）；
+    2、使用 overflow：auto （空标签）
+        
+ js 的 typeof 返回那些数据类型：
+    Object 、number 、function 、boolean、 undefined
+ 
+ 列举3种强制类型转换和2中隐式类型转换：
+    强制：parseInt、parseFloat、number
+    隐式：==  ===
+ 
+ 只有NaN是自己不等于自己的；
+        
+ split()是切割成数组的形式，join()是将数组转换成字符串
+ 
+ 数组方法：pop()尾部删除
+          push()尾部添加
+          unshift()头部添加
+          shift（）头部删除
+        
+  
+ js的本地对象、内置对象、宿主对象：
+        本地对象：array、obj、regexp 等可以new 实例化；
+        内置对象：gload Math 等不可实例化的对象；
+        宿主对象：浏览器自带的document、window等；
+        
+  document load 和 document ready的区别：
+        document.onload是在结构和样式加载完才执行js；
+        document.ready原生没有这个方法，JQuery中有$().ready(function(){});
+        
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
