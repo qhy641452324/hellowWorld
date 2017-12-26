@@ -1,1 +1,17 @@
 
+每个函数(构造函数和普通函数)在创建的时候都会有一个prototype的属性，这个属性会指向函数的原型对象。默认情况下每个原型对象都会获取一个constructor属性
+（constroctor这个属性对应创建指向该原型的实例的构造函数），这个属性包含一个指向prototype属性所在函数的指针。
+
+http://blog.csdn.net/wxw_317/article/details/49617767:
+function Person(name){
+  this.name = name
+};
+var will = new Person();
+查看will的原型（will._proto_）首先看will._proto_===Person.prototype,在js中，每个函数都有一个prototype属性，当一个函数被用作构造函数来创建实例的时候，
+该函数的prototype 属性值将被作为原型赋值给所有对象实例（也就是设置实例的_proto_属性），也就是说，所有实例的原型引用的是函数的prototype属性
+
+
+1:一切都是对象
+  对象就是若干属性的集合：在js中数组是对象，函数是对象，对象还是对象，对象里的一切都是属性；
+  
+  
